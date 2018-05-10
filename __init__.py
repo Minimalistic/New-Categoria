@@ -423,6 +423,4 @@ def disconnect():
         return redirect(url_for('showRestaurants'))
 
 if __name__ == '__main__':
-    app.secret_key = '2wbYW6vlNI5pEZX0ImMerZ_F'
-    app.debug = True
-    app.run(host='0.0.0.0', port=5000)
+    app.run()
