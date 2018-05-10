@@ -6,6 +6,7 @@ from flask import Flask,            \
                   make_response,    \
                   flash
 
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem, User
