@@ -16,7 +16,7 @@ from oauth2client.client import flow_from_clientsecrets, \
 import random
 import string
 import httplib2
-import json
+import simplejson as json
 import requests
 
 app = Flask(__name__)
