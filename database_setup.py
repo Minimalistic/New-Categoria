@@ -66,6 +66,5 @@ class MenuItem(Base):
         }
 
 # Generates the database file.
-engine = create_engine('postgresql:///restaurantmenuwithusers.db')
-
+engine = create_engine('postgresql://catalog:postgres@localhost/catalog')
 Base.metadata.create_all(engine)
