@@ -9,7 +9,6 @@ from flask import Flask,            \
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Restaurant, MenuItem, User
 from flask import session as login_session
 from oauth2client.client import flow_from_clientsecrets, \
                                 FlowExchangeError
@@ -26,7 +25,8 @@ CLIENT_ID = json.loads(
 APPLICATION_NAME = "Restaurant Menu Application"
 
 # Connect to Database and create database session
-engine = create_engine('postgresql:///restaurantmenuwithusers.db')
+engine = create_engine('postgresql://catalog:postgres@localhost/catalog')
+
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
