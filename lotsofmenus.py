@@ -384,4 +384,4 @@ session.add(menuItem1)
 session.commit()
 
 
-print "added menu items!"
+print("added menu items!")
